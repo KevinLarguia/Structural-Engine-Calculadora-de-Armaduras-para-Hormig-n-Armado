@@ -1,26 +1,44 @@
-Este ejemplo utiliza la herramienta visual wxFormBuilder (WXFB) para "dibujar" 
-las interfases. Se incluye en el proyecto ZinjaI un proyecto WXFB (wxfb_project.fbp),
-con una ventana definida a modo de ejemplo (WinExample.*). 
+# Calculadora de Armaduras para Vigas de Hormigón Armado 🏗️
 
-Los archivos wxfb_project.cpp y wxfb_project.h se generan autom�ticamente mediante 
-WXFB. Estos archivos definen clases correspondientes a las ventanas del proyecto. 
-Estas clases crean y acomodan todos los controles, y definen metodos virtuales para 
-cada uno de los eventos. El usuario no debe editar estos archivos; debe generar sus 
-propias ventanas finales heredando de estas clases y sobreescribiendo los metodos 
-correspondientes a los eventos de inter�s. El ejemplo es la clase WinExample, que 
-hereda de la clase wxfbExample definida en el proyecto WXFB.
+Esta es una aplicación de escritorio técnica diseñada para asistir en el dimensionamiento de secciones de hormigón armado. El software permite calcular el área de acero necesaria (armadura longitudinal y transversal) basándose en los esfuerzos solicitantes y las propiedades de los materiales.
 
-Para editar las ventanas bases abra el archivo wxfb_project.fbp (haciendo doble 
-click sobre el mismo en el arbol de proyectos, categor�a Otros). ZinjaI detectar� los 
-cambios en los componentes WXFB y regenerar� el c�digo de las clases correspondientes 
-autom�ticamente al recibir el foco.
+## 🚀 Características
 
-Puede acceder a la documentaci�n acerca de las funciones y clases de wxWidgets mediante 
-la opci�n "Ayuda de wxWidgets" del submen� "Dise�ar Interfases" del men� "Herramientas".
+* **Cálculo de Flexión:** Determinación de armadura longitudinal según el momento flector de diseño.
+* **Cálculo de Corte:** Dimensionamiento de estribos y separación necesaria.
+* **Verificaciones Normativas:** Control de cuantías mínimas y máximas de acero.
+* **Interfaz Nativa:** GUI fluida y multiplataforma gracias al uso de bibliotecas nativas.
 
-wxFormBuilder no se incluye en ZinjaI, por lo que debe instalarlo por 
-separado si a�n no lo hizo. La ayuda de wxWidgets solo se incluye
-si ha instalado el complemento propio de la biblioteca. Se puede acceder 
-r�pidamente a ella con la opci�n "Referencia wxWidgets..." del submenu 
-"Dise�ar Interfases" del menu "Herramientas".
+## 🛠️ Tecnologías y Herramientas
 
+* **Lenguaje:** C++ (Estándar moderno).
+* **Entorno de Desarrollo (IDE):** [ZinjaI](http://zinjai.sourceforge.net/).
+* **Framework GUI:** wxWidgets.
+* **Diseño de Interfaz:** wxFormBuilder (integrado con el flujo de trabajo de ZinjaI).
+* **Paradigma:** Programación Orientada a Objetos (POO).
+
+## ⚙️ Arquitectura del Software
+
+El proyecto aplica conceptos de POO para garantizar la mantenibilidad:
+* **Clases de Dominio:** Objetos como `Viga`, `Material` y `Seccion` que encapsulan las propiedades físicas.
+* **Lógica de Cálculo:** Métodos especializados para procesar las fórmulas de ingeniería.
+* **Gestión de Interfaz:** Separación de la lógica de eventos de la GUI del motor de cálculo.
+
+## 🔧 Ejecución en ZinjaI
+
+Para abrir y compilar este proyecto en ZinjaI, siga estos pasos:
+
+1. **Abrir el proyecto:** Inicie ZinjaI y abra el archivo de proyecto `.zpr` incluido en la raíz.
+2. **Configuración de wxWidgets:** Asegúrese de tener instalado el complemento de wxWidgets para ZinjaI (disponible en el menú de Ayuda -> Instalar Complementos).
+3. **Compilación:** Presione `F9` para compilar y ejecutar el proyecto. El IDE gestionará automáticamente los flags de compilación y el enlazado de las librerías.
+
+## 📁 Estructura del Proyecto
+
+* `/src`: Archivos de implementación (.cpp).
+* `/include`: Definiciones de clases y cabeceras (.h).
+* `proyecto.zpr`: Archivo de proyecto de ZinjaI.
+* `gui.fbp`: Proyecto de wxFormBuilder para el diseño visual de las ventanas.
+
+---
+**Desarrollado por:** Kevin Larguia  
+**Carrera:** Ingeniería Informática
