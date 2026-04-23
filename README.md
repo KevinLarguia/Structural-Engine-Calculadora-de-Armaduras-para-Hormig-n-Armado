@@ -1,4 +1,5 @@
 # Calculadora de Armaduras para Vigas de Hormigón Armado 🏗️
+<img width="1294" height="904" alt="image" src="https://github.com/user-attachments/assets/f4f3c5ca-9be0-4292-8614-3a89183331cd" />
 
 Esta es una aplicación de escritorio técnica diseñada para asistir en el dimensionamiento de secciones de hormigón armado. El software permite calcular el área de acero necesaria (armadura longitudinal y transversal) basándose en los esfuerzos solicitantes y las propiedades de los materiales.
 
